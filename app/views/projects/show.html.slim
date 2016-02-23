@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Organization:
+  = @project.organization
+p
+  strong Name:
+  = @project.name
+p
+  strong Slug:
+  = @project.slug
+
+= link_to 'Edit', edit_organization_project_path(@project.organization, @project)
+'|
+= link_to 'Back', organization_projects_path(@project.organization)
